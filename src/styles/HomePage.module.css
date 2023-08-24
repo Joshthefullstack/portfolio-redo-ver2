@@ -1,0 +1,47 @@
+.first_section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+    gap: 11em;
+}
+
+img{
+    width: 40%;
+    position: relative;
+}
+
+.image_shadow{
+    width: 33%;
+    max-width: 33%;
+    height: 68%;
+    border: 3px solid var(--secondary-color);
+    position: absolute;
+    right: 8em;
+    top: 10.6em;
+    z-index: -1;
+}
+
+.hero_text{
+    color: var(--text-color);
+}
+
+.hero_text h2{
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero_text h1{
+    font-size: 3.5em;
+    margin: 0;
+    margin-top: .5em;
+}
+
+.hero_text span{
+    color: var(--secondary-color);
+}
+
+.hero_text p{
+    font-size: 1.1em;
+}
+

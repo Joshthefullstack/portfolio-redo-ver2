@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+:root{
+  --primary-color: #161816;
+  --secondary-color: #EF15AF;
+  --asset-color: #3D3D3D;
+  --text-color: #fff;
+  --primary-text-color: #000;
+  --secondary-text-color: #9A9A9A;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Gugi', sans-serif;
+  background-color: #161816;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  cursor: none;
+}
+
+.App{
+  width: 95%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.cursor{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cursor::after, .cursor::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #E3E3E3;
+  border-radius: 50%;
+}
+
+.cursor::before{
+  background-color: #EF15AF;
+}
+
+.cursor.click::before{
+  animation: click .6s ease-in-out forwards;
+}
+
+@keyframes click{
+  0%{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(7);
+  }
+}
+
