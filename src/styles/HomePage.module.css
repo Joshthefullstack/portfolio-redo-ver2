@@ -6,9 +6,12 @@
     gap: 11em;
 }
 
-img{
+.hero_img{
     width: 40%;
     position: relative;
+    box-shadow: 10px 10px 5px -3px var(--secondary-color);
+    -webkit-box-shadow: 10px 10px 5px -3px var(--secondary-color);
+    -moz-box-shadow: 10px 10px 5px -3px var(--secondary-color);
 }
 
 .image_shadow{
@@ -34,11 +37,13 @@ img{
 .hero_text h1{
     font-size: 3.5em;
     margin: 0;
-    margin-top: .5em;
+    margin-top: .3em;
+    margin-bottom: .3em;
 }
 
 .hero_text span{
     color: var(--secondary-color);
+    font-size: 1.5em;
 }
 
 .hero_text p{

@@ -1,32 +1,46 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-// import Grop_1 from "../Group_1.png";
-// import Group_2 from "../Group_2.png";
-import Group_4 from "../group_4.png"
+import Group_4 from "../assets/group_4.png"
 import style from "../styles/HomePage.module.css";
 import ReactTyped from "react-typed";
+import {motion} from "framer-motion";
+
+const firstSectionVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 1.5,
+      duration: 5
+    }
+  }
+}
 
 const HomePage = () => {
   return (
     <div>
       <Navbar/>
-      <section className={style.first_section}>
+      <motion.section className={style.first_section} 
+        variants={firstSectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className={style.hero_text}>
           <h2>Hello</h2>
-          <h1>I am {" "} <ReactTyped 
-              strings={["Ibiam Joshua"]}
-              typeSpeed={100}
-              loop
-              backSpeed={20}
-              cursorChar=">"
-              showCursor={true}
-          /></h1>
-         <p>A front-end developer, a graphics designer, 
-          desktop publisher.</p> 
+          <h1>I am Ibiam Joshua</h1>
+          <ReactTyped
+          strings={["Frontend Developer", "Graphics Designer", "Hook-Up Guy"]}
+          typeSpeed={200}
+          loop
+          backSpeed={30}
+          cursorChar="|"
+          showCursor={true}
+          />
         </div>
-        <img src={Group_4} alt="hero_img"/>
-        <div className={style.image_shadow}></div>
-      </section>
+        <img src={Group_4} alt="hero_img" className={style.hero_img} />
+      </motion.section>
     </div>
   )
 }
